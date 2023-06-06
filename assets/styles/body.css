@@ -1,0 +1,62 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    height: 100%;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+h1 {
+    text-align: center;
+}
+
+h1, h6 {
+    color: hsl(228, 45%, 44%);
+}
+
+p {
+    font-size: 24px;
+    color: hsl(228, 45%, 44%);
+}
+
+#newsletter-text {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#features {
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+/* creates spacing within input  */
+#email {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* stretches input box to full page width */
+#emailInput {
+    width: 100%;
+}
+
+#submitButton {
+    background-color: hsl(228, 45%, 44%);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* fits image into bootstrap grid */
+#newsletter-img {
+    margin-top: 10px;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+}
