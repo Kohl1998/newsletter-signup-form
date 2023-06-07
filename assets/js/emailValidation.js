@@ -22,8 +22,7 @@ function validateEmail(userInput) {
     // ASCII Characters:
     const validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     
-    if (userInput.value.match(validRegex)) {
-        // alert(`Thanks for subscribing to our newsletter ${emailValue}`) 
+    if (userInput.value.match(validRegex)) { 
     const triggerPopUp = document.getElementById('confirmationEmail')
     triggerPopUp.removeAttribute('id')
     triggerPopUp.classList.add('openPopUp')
@@ -36,6 +35,12 @@ function validateEmail(userInput) {
     // Takes user input and places it in subscription message
     subscriptionMessage.append(subscriptionText)
 
+    const container = document.getElementById('container')
+
+    // Page container disappear after email is confirmed
+    container.style.cssText = "visibility: hidden; background-color: #fafafa;"
+
+    const displayMessage = document.getElementById('feedbackMessage')
     // Removes error message if email is formatted correctly
     displayMessage.textContent = ''
     } else {
@@ -53,4 +58,10 @@ function validateEmail(userInput) {
 function closeConfirmation () {
     const closePopUp = document.getElementById('popUpContainer')
     closePopUp.classList.add('closePopUp')
+    const container = document.getElementById('container')
+    container.style.cssText = "visibility: visible"
+
+    // Clears user input after submission
+    const emailFields = document.querySelectorAll('input')
+    emailFields.forEach((eachField => eachField.value = ''))
 } 
